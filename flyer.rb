@@ -20,3 +20,21 @@ flyers << Flyer.new("Flyer #{n}", "flyer#{n}@example.com", n * 1000)
 }
 
 puts flyers
+
+flyers.each do |flyer|
+  puts "#{flyer.name} - #{flyer.miles_flown} miles"
+end
+
+total = 0
+
+flyers.each do |flyer|
+  total += flyer.miles_flown
+end
+
+puts total
+
+promotions = {United: 1.5, Delta: 2.0, Lufthansa: 2.5}
+
+promotions.each do |name, promotion|
+  puts "Earn #{promotion}x miles by flying #{name}"
+end
