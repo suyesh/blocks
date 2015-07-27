@@ -25,3 +25,13 @@ platinum_flyers, coach_flyers = flyers.partition {|flyer| flyer.status == :plati
 
 puts platinum_flyers
 puts coach_flyers
+
+name_tags = flyers.map {|flyer| "#{flyer.name.capitalize} (#{flyer.status.upcase})"}
+puts name_tags
+
+luftansa = flyers.map {|flyer| flyer.miles_flown * 1.6}
+puts luftansa
+
+total_kilometers = flyers.reduce(0) {|total, flyer| total + (flyer.miles_flown * 1.6)}
+
+puts total_kilometers
